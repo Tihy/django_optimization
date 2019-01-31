@@ -1,0 +1,12 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Verification
+From: django@geekshop.local
+To: test1@test1.com
+Date: Thu, 31 Jan 2019 08:17:10 -0000
+Message-ID: <154892263032.2160.16771697495012503651@LAPTOP-2K925UVM>
+
+Для подтверждения учетной записи Bro на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/test1@test1.com/5d426876a4a9fb19d5f837b5b170572e9692ad04
+-------------------------------------------------------------------------------

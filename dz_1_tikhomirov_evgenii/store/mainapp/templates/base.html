@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        {% block menu%}
+
+        {% endblock %}
+        {% block content%}
+
+        {% endblock %}
+
+        <div class="footer padding-site">
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>132A Bridge Road Richmond VIC Australia.</p>
+                <p>Talk to us on 1300 132 info@bookread.com</p>
+            </div>
+            <div class="useful-info">
+                <h3>Useful Information</h3>
+                <div class="block">
+                    <div class="block-1">
+
+                        <a href="#">Sales terms</a>
+                        <a href="#">Customer care</a>
+                        <a href="#">Delivery</a>
+                    </div>
+                    <div class="block-2">
+                        <a href="#">Architect accounts</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Exchanges &amp; returns</a>
+                    </div>
+                </div>
+            </div>
+            <div class="subs">
+                <h3>Let’s Stay in Touch!</h3>
+                <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+                <input type="email">
+            </div>
+            <div class="copyrights">
+               <h4>© Copyright - BOOKREAD 2016. All Rights Reserved.</h4>
+               <div class="social-links">
+                   <a href="#"></a>
+                   <a href="#"></a>
+                   <a href="#"></a>
+                   <a href="#"></a>
+               </div>
+               <h4>Terms &amp; Conditions  /  Privacy policy &amp; Cookies</h4>
+
+            </div>
+          </div>
+    </div>
+</body>
+
+</html>

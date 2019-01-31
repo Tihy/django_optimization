@@ -1,0 +1,12 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Verification
+From: django@geekshop.local
+To: test3@test.com
+Date: Thu, 31 Jan 2019 08:25:28 -0000
+Message-ID: <154892312869.1944.3781522379989163377@LAPTOP-2K925UVM>
+
+Для подтверждения учетной записи RRR на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/test3@test.com/c0111ea4ae08db5dda34be8e52fe8bd458fa7db7
+-------------------------------------------------------------------------------

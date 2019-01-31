@@ -1,0 +1,39 @@
+[
+    {
+        "category": "Fantasy",
+        "name": "Solaris",
+        "image": "products_images/product-1.jpg",
+        "short_desc": "interesting book",
+        "description": "Who want something unusual",
+        "price": "12",
+        "quantity": "17"
+    },
+    {
+        "category": "Poems",
+        "name": "Flame",
+        "image": "products_images/product-2.jpg",
+        "short_desc": "amazing book",
+        "description": "подойдет для общения с друзьями",
+        "price": "20",
+        "quantity": "21"
+    },
+    {
+        "category": "Detective",
+        "name": "Puaro",
+        "image": "products_images/product-3.jpg",
+        "short_desc": "who like crime stories",
+        "description": "who like crime stories",
+        "price": "45",
+        "quantity": "7"
+    },
+    {
+        "category": "Comic books",
+        "name": "Hulk",
+        "image": "products_images/product-4.jpg",
+        "short_desc": "marvel",
+        "description": "if ypu dont'like DC",
+        "price": "100",
+        "quantity": "27"
+    }
+
+]

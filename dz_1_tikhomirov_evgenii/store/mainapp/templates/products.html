@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% block title %}
+{{title| capfirst}}
+{% endblock %}
+ <div class="container">
+{% block menu %}
+
+
+
+        <div class="slidercontact padding-site">
+                {% include "inc-menu.html" %}
+            <div class="slider-textcontact">
+                <h2>Our books  </h2>
+            </div>
+
+        </div>
+
+{% endblock %}
+
+{% block content %}
+
+         <div class="contentp padding-site">
+                {% include "inc-product.html" %}
+         </div>
+       <div class="details">
+
+
+        <div class="details-products">
+            <div class="details-slider">
+                <div class="slider-product">
+                    <img src="{{ hot_product.image.url }}">
+                </div>
+            </div>
+
+            <div class="description">
+                <h3 class="big-bold">{{ hot_product.name }}</h3>
+                <h3 class="red">горячее предложение</h3>
+                <p class="price"> {{ hot_product.price }} <span>руб</span></p>
+
+            </div>
+        </div>
+         </div>
+ {% endblock %}

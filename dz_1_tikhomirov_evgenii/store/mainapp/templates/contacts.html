@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block menu %}
+
+
+ <div class="container">
+        <div class="slidercontact padding-site">
+                {% include "inc-menu.html" %}
+            <div class="slider-textcontact">
+                <h2>Our Contacts</h2>
+            </div>
+
+        </div>
+
+
+{% endblock %}
+
+{% block content %}
+
+        <div class="trendsc padding-site">
+            <div class="shop-casecontact">
+                {% if contacts  %}
+                {% for item in contacts %}
+                <div class="contact-place">
+                <a href="#" class="placeholder"><img src="/static/img/point.png" alt="arrow"> </a>
+                <h3>{{item.name}}</h3>
+                <p>Email addres: {{item.Email}}</p>
+                </div>
+                {% endfor  %}
+                {% else %}
+                <h2>Контактов пока нет</h2>
+                {% endif %}
+
+
+            
+            </div>
+        </div>
+</div>
+{% endblock %}

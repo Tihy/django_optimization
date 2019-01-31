@@ -1,0 +1,41 @@
+
+<div class="container">
+        <div class="slidercontact padding-site">
+                <div class="header">
+                <a href="#" class="logo"><img src="/static/img/logo.png" width='250' alt="logo"></a>
+                <ul class="menu">
+                    <li><a href=" {% url 'main' %}" class="{% if request.resolver_match.url_name == 'main' %}active-link{% endif %}">HOME</a></li>
+                    <li><a href="{% url 'products' %}" class="{% if request.resolver_match.url_name == 'products' %}active-link{% endif %}">BOOKS</a></li>
+                    <li><a href="{% url 'contacts' %}" class="{% if request.resolver_match.url_name == 'contacts' %}active-link{% endif %}">CONTACTS</a></li>
+                    <li><a href="{% url 'authapp:login' %}" class="{% if request.resolver_match.url_name == 'login' %}active-link{% endif %}">LOGIN</a></li>
+                </ul>
+                </div>
+
+    <!--{% if user.is_authenticated %}-->
+        <!--<li>-->
+            <!--<a href="{% url 'authapp:edit' %}">-->
+                <!--{{ user.first_name|default:'Пользователь' }}-->
+            <!--</a>-->
+        <!--</li>-->
+    <!--{% endif %}-->
+    <!--<li>-->
+        <!--{% if user.is_authenticated %}-->
+            <!--<a href="{% url 'authapp:logout' %}">LOGOUT</a>-->
+        <!--{% else %}-->
+            <!--<a href="{% url 'authapp:login' %}">LOGIN MODE</a>-->
+        <!--{% endif %}-->
+    <!--</li>-->
+
+                    <!--<li><input class="search-bar" type="text" name="search"></li>-->
+                <!--</ul>-->
+
+            <div class="slider-textcontact">
+                <h2>
+                    {% block name %}
+                    {{name}}
+                    {% endblock %}
+                </h2>
+            </div>
+        </div>
+</div>
+

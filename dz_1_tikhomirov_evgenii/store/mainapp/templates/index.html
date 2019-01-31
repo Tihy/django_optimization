@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% block title %}
+{{title| capfirst}}
+{% endblock %}
+{% block menu %}
+
+ <div class="slider padding-site">
+            {% include "inc-menu.html" %}
+            <div class="slider-text">
+                <h3>{{visit_date|date:"d m Y"}}</h3>
+                <h2>The Flame</h2>
+
+                <p>The Flame is the final work from Leonard Cohen, the revered poet and musician whose fans span generations and whose work is celebrated throughout the world.</p>
+                <a href="{% url 'contacts' %}" class="order-link">READ IT<img src="/static/img/arrow.svg" alt="arrow"> </a>
+            </div>
+            <div class="paggination">
+                <a href="#" class="circle"></a>
+                <a href="#" class="circle"></a>
+                <a href="#" class="circle active-circle"></a>
+                <a href="#" class="circle"></a>
+                <a href="#" class="circle"></a>
+            </div>
+        </div>
+
+{% endblock %}
+{% block content %}
+
+
+
+
+        <div class="content padding-site">
+            <ul class="sort">
+                <li><a href="#" class="active-sort">Featured</a></li>
+                <li><a href="#">New</a></li>
+            </ul>
+            <a href="#" class="explore">explore all<img src="/static/img/arrow.svg" alt="arrow"></a>
+            <div class="shop-case">
+                {% if books  %}
+                {% for item in books %}
+                <div class="item">
+                    <img class="product-image" src="/static/img/products/product-1.jpg" width="270" alt="product image">
+                    <div class="middle">
+                        <a href="{% url 'contacts' %}" class="order-link small-order-link"><img src="/static/img/arrow.svg" alt="arrow"></a>
+                        <h3>{{item.name}}</h3>
+                        <p>Open new world with Carol</p>
+                    </div>
+                </div>
+                {% endfor  %}
+                {% endif %}
+
+
+            </div>
+        </div>
+        <div class="promo">
+            <div class="promo-product promo1">
+                <h3>exclusive</h3>
+                <h2>Be a writer</h2>
+                <p>Suggest your idea or create new story and we will publish your first book </p>
+                <a href="{% url 'contacts' %}" class="order-link">ORDER US<img src="/static/img/arrow.svg" alt="arrow"> </a>
+            </div>
+            <div class="promo-product promo2">
+                <h3>exclusive</h3>
+                <h2>Expand a workplace</h2>
+                <p>Read everythere and we will make your search easier. Join our community</p>
+                <a href="{% url 'contacts' %}" class="order-link">ORDER US<img src="/static/img/arrow.svg" alt="arrow"> </a>
+            </div>
+        </div>
+        <div class="trends padding-site">
+            <div class="shop-case">
+                <h2>Trending Books</h2>
+                <a href="{% url 'contacts' %}" class="explore">explore all<img src="/static/img/arrow.svg" alt="arrow"></a>
+
+
+                {% if trend  %}
+                {% for item in trend %}
+                <div class="item">
+                    <img class="product-image" src="{{item.image}}" width="270" alt="product-image">
+                    <div class="middle">
+                        <a href="{% url 'contacts' %}" class="order-link small-order-link"><img src="/static/img/arrow.svg" alt="arrow"></a>
+                        <h2>{{item.name}}</h2>
+                        <p>{{item.text}}</p>
+                    </div>
+                </div>
+
+                {% endfor  %}
+                {% endif %}
+
+            </div>
+        </div>
+        <div class="slider slider2 padding-site">
+            <div class="slider-text">
+                <h3>HOT DEAL</h3>
+                <h2>Reading App</h2>
+                <p>Now all your books are available on mobile devices.</p>
+                <a href="{% url 'contacts' %}" class="order-link">Download<img src="/static/img/arrow.svg" alt="arrow"> </a>
+            </div>
+            <div class="paggination">
+                <a href="#" class="circle"></a>
+                <a href="#" class="circle"></a>
+                <a href="#" class="circle active-circle"></a>
+                <a href="#" class="circle"></a>
+                <a href="#" class="circle"></a>
+            </div>
+        </div>
+        <div class="exclusive padding-site">
+            <div class="promo-product">
+                <h3>exclusive</h3>
+                <h2>4 for 3</h2>
+                <p>Choose any three books of different genres and get the fourth as a gift</p>
+                <a href="{% url 'contacts' %}" class="order-link">ORDER US<img src="/static/img/arrow.svg" alt="arrow"> </a>
+            </div>
+
+
+            <div class="shop-case">
+
+                {% if examples  %}
+                {% for item in examples %}
+                <div class="item"><img src="{{item.image}}" width="270" alt="product-image" class="product-image">
+                    <div class="middle">
+                        <a href="{% url 'contacts' %}" class="order-link small-order-link"><img src="/static/img/arrow.svg" alt="arrow"></a>
+                        <h3>{{item.name}}</h3>
+                        <p>{{item.text}}</p>
+                    </div>
+                </div>
+                {% endfor  %}
+                {% endif %}
+
+            </div>
+
+        </div>
+        <div class="app padding-site">
+            <div class="slider-text">
+                <h3>mobile app</h3>
+                <h2>Find. Follow. Favorite.</h2>
+                <p>Save your favorites and share your style.</p>
+                <a href="#"><img src="/static/img/app-store.jpg" alt="app-store-link"></a>
+                <a href="#"><img src="/static/img/google-play.jpg" alt="google-store-link"></a>
+            </div>
+        </div>
+{% endblock %}
