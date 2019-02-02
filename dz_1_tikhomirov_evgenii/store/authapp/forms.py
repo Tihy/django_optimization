@@ -4,6 +4,7 @@ from .models import ShopUser
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 import hashlib
 import random
+from .models import ShopUserProfile
 
 email = 'test@test.com'
 class ShopUserLoginForm(AuthenticationForm):
@@ -66,3 +67,13 @@ class ShopUserEditForm(UserChangeForm):
                 raise forms.ValidationError("Вы слишком молоды!")
 
             return data
+
+class ShopUserProfileEditForm(forms.ModelForm):
+    class Meta:
+        model = ShopUserProfile
+        fields = ('tagline', 'aboutMe', 'gender')
+
+    def __init__(self, *args, **kwargs):
+        super(ShopUserProfileEditForm, self).__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control'

@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 import mainapp.views as mainapp
-from django.urls import path
+from django.urls import path, re_path
 
 
 urlpatterns = [
@@ -35,7 +35,9 @@ urlpatterns = [
     url(r'^basket/', include('basketapp.urls', namespace='basket')),
     # url(r'^standartadmin/', admin.site.urls),
 
-    path('admin/', include('adminapp.urls', namespace='admin'))
+    path('admin/', include('adminapp.urls', namespace='admin')),
+
+    re_path(r'^auth/verify/google/oauth2/', include("social_django.urls", namespace="social"))
 
 
 
