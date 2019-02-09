@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'authapp',
     'basketapp',
     'adminapp',
-    'social_django'
+    'social_django',
+    'ordersapp'
 ]
 
 MIDDLEWARE = [
@@ -164,6 +165,7 @@ EMAIL_FILE_PATH = 'tmp/email-messages'
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.vk.VKOAuth2'
 )
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
@@ -171,9 +173,16 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 with open('store/google+.json', 'r') as f:
     GOOGLE_PLUS = json.load(f)
 
+
+
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = GOOGLE_PLUS['SOCIAL_AUTH_GOOGLE_OAUTH2_KEY']
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = GOOGLE_PLUS['SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET']
 LOGIN_ERROR_URL = '/'
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = '6788219'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = '5Ut53GEteiKiryXoMLeH'
+
+
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_IGNORE_DEFAULT_SCOPE = True
 SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
